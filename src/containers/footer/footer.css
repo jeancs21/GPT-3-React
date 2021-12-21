@@ -34,6 +34,10 @@
     cursor: pointer;
 }
 
+.gpt3__footer-link {
+    color: white
+}
+
 .gpt3__footer-btn p {
     font-size: 18px;
     font-family: var(--font-family);

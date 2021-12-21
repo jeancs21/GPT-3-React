@@ -36,6 +36,14 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
+  .section__init {
+    display: flex;
+  }
+
+  .section__space {
+    height: 85vh;
+  }
   
   .section__padding {
     padding: 4rem 6rem;

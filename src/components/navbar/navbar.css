@@ -9,7 +9,7 @@
 .gpt3__navbar-links {
     flex: 1;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
 }
 
@@ -18,8 +18,8 @@
 }
 
 .gpt3__navbar-links_logo img {
-    width: 62.56px;
-    height: 16.02px;
+    height: 20px;
+    float: left;
 }
 
 .gpt3__navbar-links_container {
