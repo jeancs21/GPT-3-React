@@ -1,20 +1,26 @@
 import React, { useState } from 'react';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
-import logo from '../../assets/logo.svg';
 import './navbar.css';
 import {useLocation} from "react-router-dom";
 
 const Menu = () => {
-  const location = useLocation();
-  console.log(location);
+  const { pathname } = useLocation();
+
+  const handleIsActive = (routeToMatch) => {
+    if (pathname === routeToMatch) {
+      return 'gpt3__navbar-isSelected';
+    }
+    return '';
+  }
+
   return (
     <>
-      <p><a href="/">Home</a></p>
-      <p><a href="/workTogether">Let's work together</a></p>
-      <p><a href="#possibility">Partners</a></p>
-      <p><a href="#features">Education</a></p>
-      <p><a href="#blog">Events</a></p>
-      <p><a href="#blog">Contact Us!</a></p>
+      <p><a href="/" className={handleIsActive('/')} >Home</a></p>
+      <p><a href="/workTogether" className={handleIsActive('/workTogether')}>Let's work together</a></p>
+      <p><a href="#possibility" className={handleIsActive('/possibility')}>Partners</a></p>
+      <p><a href="#features" className={handleIsActive('/features')}>Education</a></p>
+      <p><a href="#blog" className={handleIsActive('/blog')}>Events</a></p>
+      <p><a href="#blog" className={handleIsActive('/123')}>Contact Us!</a></p>
     </>
   )
 
